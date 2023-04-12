@@ -1,13 +1,17 @@
 
-const Card = () => {
+const Card = ({ data }) => {
+
+    const id = data.id;
+    const name = data.name;
+    const img = data.img;
 
     return (
-        <div className="card">
+        <div className="card" idValue={id} onclick={null}>
             <div>
-                <img />
+                <img src={img} alt={name} />
             </div>
             <div>
-                <p>This is a card</p>
+                <h2>{name}</h2>
             </div>
         </div>
     )

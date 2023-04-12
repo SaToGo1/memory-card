@@ -9,11 +9,19 @@ import '../styles/Main.css';
 import AngularIcon from '../Icons/angular.svg';
 
 const Main = () => {
-    const cardArray = useState();
+    // const cardArray = useState(loadCardData());
 
+    const [angular] = loadCardData();
+
+    console.log(angular)
+
+    const cardClciked = () => {
+        return 0;
+    }
+    
     return (
         <main>
-            <Card />
+            <Card data={angular} />
             <div className='card'>hi</div>
             <div className='card'>hi</div>
             <div className='card'>hi</div>
@@ -36,76 +44,76 @@ export default Main;
 const loadCardData = () => {
     return [
         {
-            Id: "1",
+            id: "0",
             name: "Angular",
-            Img: AngularIcon,
-            Clicked: false,
+            img: AngularIcon,
+            clicked: false,
         },
         {
-            Id: "2",
+            id: "1",
             name: "CSS3",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "3",
+            id: "2",
             name: "HTML5",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "4",
+            id: "3",
             name: "Javascript",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "5",
+            id: "4",
             name: "JSON",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "6",
+            id: "5",
             name: "MongoDB",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "7",
+            id: "6",
             name: "NodeJs",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "8",
+            id: "7",
             name: "php",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "9",
+            id: "8",
             name: "Python",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "10",
+            id: "9",
             name: "REACT",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "11",
+            id: "10",
             name: "Typescript",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
         {
-            Id: "12",
+            id: "11",
             name: "VueJs",
-            Img: "",
-            Clicked: false,
+            img: "",
+            clicked: false,
         },
     ]
 }
