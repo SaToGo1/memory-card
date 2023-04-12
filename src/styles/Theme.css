@@ -2,4 +2,9 @@
     --color-background: #282c34;
     --color-light-background: hsl(221, 13%, 28%);
     --color-text: #FFF;
+
+    /* --color-card: #34282C; */
+    --color-card: #736167;
+    --color-card-border: #341B23;
+    --color-card-boxShadow: hsl(220, 13%, 10%);
 }
