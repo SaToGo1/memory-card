@@ -4,15 +4,13 @@
 
 h1 {
     margin: 0;
-
-    /* font-size: 2rem; */
 }
 
 header {
     background-color: var(--color-light-background);
     color: var(--color-text);
 
-    padding: 20px 10px 24px 10px;
+    padding: 20px 20px 24px 20px;
     display: flex;
     align-items: center;
     

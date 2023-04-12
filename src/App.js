@@ -4,6 +4,7 @@ import './App.css';
 import './styles/Theme.css';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [score, setScore] = useState( 0 );
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Header score={score} bestScore={bestScore} />
+      <Footer />
     </div>
   );
 }
