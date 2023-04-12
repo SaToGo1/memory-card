@@ -1,12 +1,13 @@
 
-const Card = ({ data }) => {
+const Card = ({ data, cb }) => {
 
     const id = data.id;
     const name = data.name;
     const img = data.img;
+    const callBack = cb;
 
     return (
-        <div className="card" idvalue={id} onClick={null}>
+        <div className="card" onClick={(e) => { callBack(e, id)}} >
             <div>
                 <img src={img} alt={name} />
             </div>

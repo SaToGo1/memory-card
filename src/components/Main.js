@@ -25,15 +25,16 @@ import VueJsIcon from '../Icons/VueJs.svg';
 const Main = () => {
     const [cardArray, setCardArray] = useState(loadCardData());
 
-    // const cardClciked = (e) => {
-    //     let id = e.target.id;
+    const cardClicked = (e, id) => {
+        console.log(`Hello at id: ${id}`);
+        return 0;
+    }
 
-    // }
-
+    
     return (
         <main>
             {cardArray.map(card => (
-                <Card data={card} key={uniqid()} />
+                <Card data={card} key={uniqid()} cb={cardClicked} />
             ))}
         </main>   
     )
