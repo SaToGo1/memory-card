@@ -1,6 +1,6 @@
 import '../styles/Header.css'
 
-const Header = () => {
+const Header = ({score, bestScore}) => {
 
     return(
         <header>
@@ -8,9 +8,9 @@ const Header = () => {
                 <h1>Memory Game</h1>
             </div>
             <div className='header__score'>
-                <p>Score: </p>
+                <p>Score: {score}</p>
                 <p>|</p>
-                <p>Best: </p> 
+                <p>Best: {bestScore}</p> 
             </div>
             <div className='header__hidden'></div>
         </header>
