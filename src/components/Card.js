@@ -6,7 +6,7 @@ const Card = ({ data }) => {
     const img = data.img;
 
     return (
-        <div className="card" idValue={id} onclick={null}>
+        <div className="card" idvalue={id} onClick={null}>
             <div>
                 <img src={img} alt={name} />
             </div>
