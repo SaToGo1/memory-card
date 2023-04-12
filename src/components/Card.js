@@ -2,7 +2,7 @@
 const Card = () => {
 
     return (
-        <div>
+        <div className="card">
             <div>
                 <img />
             </div>

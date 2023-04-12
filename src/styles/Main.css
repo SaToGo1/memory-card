@@ -3,8 +3,7 @@ main {
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px;
-    
+    gap: 50px; 
 }
 
 .card {
@@ -15,4 +14,7 @@ main {
     background-color: var(--color-card);
 
     box-shadow: 2px 2px 2px 2px var(--color-card-boxShadow);
+
+    width: 300px;
+    height: 300px;
 }
