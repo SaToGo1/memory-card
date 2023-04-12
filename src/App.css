@@ -1,7 +1,8 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  background-color: #282c34;
+  background-color: var(--color-background);
+}
+
   /* color: #61dafb */
   /* color: white; */
-}
