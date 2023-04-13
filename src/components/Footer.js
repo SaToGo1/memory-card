@@ -14,12 +14,15 @@ export default Footer;
 const footerStyle = () => {
     return {
         marginTop: "10px",
+        marginBottom: "20px",
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
         color: "white",
         marginLeft: "20px",
         minHeight: "20px",
+        position: "absolute",
+        bottom: "0",
     }
 }
 
