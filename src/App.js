@@ -18,10 +18,14 @@ function App() {
     }
   }
 
+  const resetScore = () => {
+    setScore(0)
+  }
+
   return (
     <div className="App">
       <Header score={score} bestScore={bestScore} />
-      <Main incrementScore={incrementScore} />
+      <Main incrementScore={incrementScore} resetScore={resetScore} />
       <Footer />
     </div>
   );

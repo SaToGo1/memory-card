@@ -22,19 +22,28 @@ import TypescriptIcon from '../Icons/Typescript.svg';
 import VueJsIcon from '../Icons/VueJs.svg';
 
 
-const Main = ({ incrementScore }) => {
+const Main = ({ incrementScore, resetScore }) => {
     const [cardArray, setCardArray] = useState(loadCardData());
 
     const cardClicked = (e, id) => {
         let [card] = cardArray.filter( cd => cd.id === id )
-        card.clicked = true;
+        
+        if(card.clicked === false){
+            card.clicked = true;
 
-        setCardArray(cardArray.map(cd => {
-            if(cd.id === id) return card;
-            return cd;
-        }))
+            setCardArray(cardArray.map(cd => {
+                if(cd.id === id) return card;
+                return cd;
+            }))
 
-        incrementScore()
+            incrementScore()
+        }else{
+            resetScore();
+            setCardArray(cardArray.map(cd => {
+                cd.clicked = false;
+                return cd;
+            }));
+        }
     }
 
     
