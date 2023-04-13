@@ -22,19 +22,26 @@ import TypescriptIcon from '../Icons/Typescript.svg';
 import VueJsIcon from '../Icons/VueJs.svg';
 
 
-const Main = () => {
+const Main = ({ incrementScore }) => {
     const [cardArray, setCardArray] = useState(loadCardData());
 
     const cardClicked = (e, id) => {
-        console.log(`Hello at id: ${id}`);
-        return 0;
+        let [card] = cardArray.filter( cd => cd.id === id )
+        card.clicked = true;
+
+        setCardArray(cardArray.map(cd => {
+            if(cd.id === id) return card;
+            return cd;
+        }))
+
+        incrementScore()
     }
 
     
     return (
         <main>
             {cardArray.map(card => (
-                <Card data={card} key={uniqid()} cb={cardClicked} />
+                <Card data={card} key={card.id} cb={cardClicked} />
             ))}
         </main>   
     )
@@ -46,73 +53,73 @@ export default Main;
 const loadCardData = () => {
     return [
         {
-            id: "0",
+            id: uniqid(),
             name: "Angular",
             img: AngularIcon,
             clicked: false,
         },
         {
-            id: "1",
+            id: uniqid(),
             name: "CSS3",
             img: CSS3Icon,
             clicked: false,
         },
         {
-            id: "2",
+            id: uniqid(),
             name: "HTML5",
             img: HTML5Icon,
             clicked: false,
         },
         {
-            id: "3",
+            id: uniqid(),
             name: "Javascript",
             img: JavascriptIcon,
             clicked: false,
         },
         {
-            id: "4",
+            id: uniqid(),
             name: "JSON",
             img: JSONIcon,
             clicked: false,
         },
         {
-            id: "5",
+            id: uniqid(),
             name: "MongoDB",
             img: mongodbIcon,
             clicked: false,
         },
         {
-            id: "6",
+            id: uniqid(),
             name: "NodeJs",
             img: NodeJsIcon,
             clicked: false,
         },
         {
-            id: "7",
+            id: uniqid(),
             name: "php",
             img: phpIcon,
             clicked: false,
         },
         {
-            id: "8",
+            id: uniqid(),
             name: "Python",
             img: pythonIcon,
             clicked: false,
         },
         {
-            id: "9",
+            id: uniqid(),
             name: "REACT",
             img: REACTIcon,
             clicked: false,
         },
         {
-            id: "10",
+            id: uniqid(),
             name: "Typescript",
             img: TypescriptIcon,
             clicked: false,
         },
         {
-            id: "11",
+            id: uniqid(),
             name: "VueJs",
             img: VueJsIcon,
             clicked: false,

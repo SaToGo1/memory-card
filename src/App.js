@@ -11,10 +11,17 @@ function App() {
   const [score, setScore] = useState( 0 );
   const [bestScore, setBestScore] = useState( 0 );
 
+  const incrementScore = () => {
+    setScore( score + 1 );
+    if ( ( score + 1 ) > bestScore ) {
+      setBestScore(score + 1);
+    }
+  }
+
   return (
     <div className="App">
       <Header score={score} bestScore={bestScore} />
-      <Main />
+      <Main incrementScore={incrementScore} />
       <Footer />
     </div>
   );
