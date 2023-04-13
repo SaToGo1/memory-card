@@ -25,7 +25,7 @@ import VueJsIcon from '../Icons/VueJs.svg';
 const Main = ({ incrementScore, resetScore }) => {
     const [cardArray, setCardArray] = useState(loadCardData());
 
-    const cardClicked = (e, id) => {
+    const handleClick = (e, id) => {
         let [card] = cardArray.filter( cd => cd.id === id )
         
         if(card.clicked === false){
@@ -36,7 +36,7 @@ const Main = ({ incrementScore, resetScore }) => {
                 return cd;
             }))
 
-            incrementScore()
+            incrementScore();
         }else{
             resetScore();
             setCardArray(cardArray.map(cd => {
@@ -44,13 +44,29 @@ const Main = ({ incrementScore, resetScore }) => {
                 return cd;
             }));
         }
+        shuffleArray();
+    }
+
+    const shuffleArray = () => {
+        let array = [];
+        let cardArrayAux = [];
+
+        while ( array.length < cardArray.length ) {
+            let index = Math.floor(Math.random() * 12);
+            if(!array.includes(index)){
+                array.push(index);
+                cardArrayAux.push(cardArray[index]);
+            }
+        }
+
+        setCardArray(cardArrayAux);
     }
 
     
     return (
         <main>
             {cardArray.map(card => (
-                <Card data={card} key={card.id} cb={cardClicked} />
+                <Card data={card} key={card.id} cb={handleClick} />
             ))}
         </main>   
     )

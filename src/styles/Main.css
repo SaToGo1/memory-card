@@ -3,9 +3,12 @@ main {
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px; 
+    gap: 50px;
 
-    margin: 0px 22px 0px 22px;
+    max-width: 1600px;
+
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .card {
@@ -17,6 +20,6 @@ main {
 
     box-shadow: 2px 2px 2px 2px var(--color-card-boxShadow);
 
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
 }
