@@ -3,7 +3,7 @@ main {
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px;
+    gap: 10px 10px;
 
     max-width: 1600px;
 
@@ -20,6 +20,10 @@ main {
 
     box-shadow: 2px 2px 2px 2px var(--color-card-boxShadow);
 
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.card h2 {
+    margin-bottom: 0px;
 }

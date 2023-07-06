@@ -13,16 +13,17 @@ export default Footer;
 
 const footerStyle = () => {
     return {
-        marginTop: "10px",
-        marginBottom: "20px",
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
         color: "white",
         marginLeft: "20px",
         minHeight: "20px",
-        position: "absolute",
-        bottom: "0",
+        position: "fixed",
+        bottom: "50px",
+        backgroundColor: "#00000060",
+        padding: "4px",
+        borderRadius: "4px"
     }
 }
 
